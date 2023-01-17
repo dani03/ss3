@@ -1,0 +1,20 @@
+{
+  "name": "spectrum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "json-server --watch ./db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dani03/ss3.git"
+  },
+  "author": "daniel samè",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dani03/ss3/issues"
+  },
+  "homepage": "https://github.com/dani03/ss3#readme"
+}
