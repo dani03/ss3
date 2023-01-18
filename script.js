@@ -1,3 +1,4 @@
+
 let images = document.querySelector('img');
 
 images.addEventListener('click', (event) => {
@@ -28,13 +29,26 @@ elements.forEach(element => {
 
 });
 
-async function postData(url = 'post/data', data = {}) {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
+const loginForm = document.getElementById("newletter-form");
+loginForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(e) {
+  e.preventDefault();
+  //alert("ici");
+  const formData = new FormData(e.target);
+  const formProps = Object.fromEntries(formData);
+  console.log(formProps.email)
+
+  axios.post('http://localhost:3000/emails', {
+
+    email: formProps.email
   })
-  return response.json()
+    .then(function (response) {
+      console.log(response, 'response axios');
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  alert('merci pour votre inscription');
 }
