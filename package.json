@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/dani03/ss3/issues"
   },
-  "homepage": "https://github.com/dani03/ss3#readme",
-  "dependencies": {
-    "axios": "^1.2.3"
-  }
+  "homepage": "https://github.com/dani03/ss3#readme"
 }
