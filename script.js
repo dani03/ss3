@@ -39,17 +39,17 @@ function handleSubmit(e) {
   const formProps = Object.fromEntries(formData);
   console.log(formProps.email)
 
-  // axios.post('http://localhost:3000/emails', {
+  axios.post('http://localhost:3000/emails', {
 
-  //   email: formProps.email
-  // })
-  //   .then(function (response) {
-  //     console.log(response, 'response axios');
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  // let email = document.getElementById('email_form');
-  // email.value = "";
-  // alert(' Brainstasy vous remercie pour votre inscription vous serez parmis les premiers informer des nouveautés.');
+    email: formProps.email
+  })
+    .then(function (response) {
+      console.log(response, 'response axios');
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  let email = document.getElementById('email_form');
+  email.value = "";
+  alert(' Brainstasy vous remercie pour votre inscription vous serez parmis les premiers informer des nouveautés.');
 }
