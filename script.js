@@ -49,6 +49,7 @@ function handleSubmit(e) {
     .catch(function (error) {
       console.log(error);
     });
-
-  alert('merci pour votre inscription');
+  let email = document.getElementById('email_form');
+  email.value = "";
+  alert(' Brainstasy vous remercie pour votre inscription vous serez parmis les premiers informer des nouveautés.');
 }
